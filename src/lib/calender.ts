@@ -11,12 +11,11 @@ export async function createCalendarEvent(eventDetails: {
   attendees?: string[];
 }) {
   try {
-    const auth = new google.auth.JWT(
-      process.env.GOOGLE_CALENDAR_CLIENT_EMAIL,
-      undefined,
-      process.env.GOOGLE_CALENDAR_PRIVATE_KEY?.replace(/\\n/g, "\n"),
-      SCOPES
-    );
+    const auth = new google.auth.JWT({
+      email: process.env.GOOGLE_CALENDAR_CLIENT_EMAIL,
+      key: process.env.GOOGLE_CALENDAR_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+      scopes: SCOPES,
+    });
 
     const calendar = google.calendar({ version: "v3", auth });
 
@@ -60,12 +59,11 @@ export async function createCalendarEvent(eventDetails: {
 
 export async function getAvailableSlots(durationMinutes: number = 30) {
   try {
-    const auth = new google.auth.JWT(
-      process.env.GOOGLE_CALENDAR_CLIENT_EMAIL,
-      undefined,
-      process.env.GOOGLE_CALENDAR_PRIVATE_KEY?.replace(/\\n/g, "\n"),
-      SCOPES
-    );
+    const auth = new google.auth.JWT({
+      email: process.env.GOOGLE_CALENDAR_CLIENT_EMAIL,
+      key: process.env.GOOGLE_CALENDAR_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+      scopes: SCOPES,
+    });
 
     const calendar = google.calendar({ version: "v3", auth });
 

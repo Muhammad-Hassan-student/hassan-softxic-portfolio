@@ -19,7 +19,7 @@ const Hero = () => {
         delayChildren: 0.3,
       },
     },
-  };
+  } as const;
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -31,7 +31,7 @@ const Hero = () => {
         stiffness: 100,
       },
     },
-  };
+  } as const;
 
   return (
     <section

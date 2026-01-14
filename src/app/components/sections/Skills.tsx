@@ -101,7 +101,7 @@ const Skills = () => {
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-gradient">
-                    {skill.experness}+
+                    {skill.experience}+
                   </div>
                   <div className="text-sm text-gray-500">years</div>
                 </div>
