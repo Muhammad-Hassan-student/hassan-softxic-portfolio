@@ -1,0 +1,152 @@
+[
+  {
+    "id": "project-1",
+    "title": "FinTech SaaS Platform",
+    "description": "A comprehensive financial management platform for small businesses",
+    "problem": "Small businesses struggled with fragmented financial tools and manual processes",
+    "solution": "Built an all-in-one platform with automated accounting, invoicing, and reporting",
+    "techStack": ["Next.js 14", "TypeScript", "Node.js", "PostgreSQL", "Stripe", "AWS"],
+    "metrics": {
+      "performance": "95+ Lighthouse Score",
+      "speed": "< 100ms API response",
+      "scale": "Handles 50k+ users"
+    },
+    "results": [
+      "Reduced accounting time by 70%",
+      "Increased revenue tracking accuracy by 95%",
+      "Scaled from 100 to 10k+ users in 6 months"
+    ],
+    "liveUrl": "https://fintech-saas.com",
+    "githubUrl": null,
+    "image": "/projects/fintech.jpg",
+    "category": "saas",
+    "client": "FinTech Startup",
+    "duration": "6 months",
+    "complexity": "High"
+  },
+  {
+    "id": "project-2",
+    "title": "E-commerce Mobile App",
+    "description": "Cross-platform mobile shopping app with AR features",
+    "problem": "Traditional e-commerce apps lacked engaging user experiences and slow performance",
+    "solution": "Developed a React Native app with AR product visualization and optimized performance",
+    "techStack": ["React Native", "TypeScript", "Redux", "Firebase", "AR Core", "Stripe"],
+    "metrics": {
+      "performance": "60 FPS smooth animations",
+      "speed": "2s app launch time",
+      "scale": "100k+ downloads"
+    },
+    "results": [
+      "Increased conversions by 40% with AR features",
+      "Reduced cart abandonment by 25%",
+      "4.8-star rating on app stores"
+    ],
+    "liveUrl": "https://apps.apple.com/app/id123",
+    "githubUrl": null,
+    "image": "/projects/ecommerce.jpg",
+    "category": "mobile",
+    "client": "Retail Brand",
+    "duration": "4 months",
+    "complexity": "Medium"
+  },
+  {
+    "id": "project-3",
+    "title": "Healthcare Management System",
+    "description": "HIPAA-compliant patient management and telemedicine platform",
+    "problem": "Healthcare providers needed secure, compliant digital solutions for patient management",
+    "solution": "Built a secure platform with EHR, appointment scheduling, and telehealth features",
+    "techStack": ["Next.js", "Node.js", "MongoDB", "WebRTC", "Redis", "Docker"],
+    "metrics": {
+      "performance": "99.9% uptime",
+      "speed": "Real-time video conferencing",
+      "scale": "50+ clinics"
+    },
+    "results": [
+      "Reduced administrative workload by 60%",
+      "Improved patient satisfaction by 45%",
+      "Achieved HIPAA compliance certification"
+    ],
+    "liveUrl": null,
+    "githubUrl": null,
+    "image": "/projects/healthcare.jpg",
+    "category": "enterprise",
+    "client": "Healthcare Network",
+    "duration": "8 months",
+    "complexity": "High"
+  },
+  {
+    "id": "project-4",
+    "title": "Real-time Analytics Dashboard",
+    "description": "Dashboard for monitoring business metrics with real-time updates",
+    "problem": "Companies lacked real-time visibility into key business metrics",
+    "solution": "Created a customizable dashboard with WebSockets and data visualization",
+    "techStack": ["React", "TypeScript", "WebSockets", "D3.js", "Node.js", "PostgreSQL"],
+    "metrics": {
+      "performance": "Handles 10k+ concurrent connections",
+      "speed": "Real-time updates < 1s",
+      "scale": "Processes 1M+ events/day"
+    },
+    "results": [
+      "Reduced decision-making time by 80%",
+      "Improved data accuracy by 99%",
+      "Scaled to handle 10x initial traffic"
+    ],
+    "liveUrl": null,
+    "githubUrl": "https://github.com/hassan-dev/analytics-dashboard",
+    "image": "/projects/analytics.jpg",
+    "category": "dashboard",
+    "client": "Tech Startup",
+    "duration": "3 months",
+    "complexity": "Medium"
+  },
+  {
+    "id": "project-5",
+    "title": "Education Platform",
+    "description": "Interactive learning platform with video courses and assessments",
+    "problem": "Traditional LMS lacked engagement features and personalization",
+    "solution": "Built a modern platform with interactive content, gamification, and AI recommendations",
+    "techStack": ["Next.js", "Python", "FastAPI", "PostgreSQL", "FFmpeg", "Redis"],
+    "metrics": {
+      "performance": "95+ Performance score",
+      "speed": "Video streaming < 2s buffer",
+      "scale": "10k+ active students"
+    },
+    "results": [
+      "Increased course completion rates by 65%",
+      "Improved student engagement by 80%",
+      "Reduced server costs by 40% with optimization"
+    ],
+    "liveUrl": "https://learnplatform.com",
+    "githubUrl": null,
+    "image": "/projects/education.jpg",
+    "category": "education",
+    "client": "EdTech Startup",
+    "duration": "5 months",
+    "complexity": "High"
+  },
+  {
+    "id": "project-6",
+    "title": "API Gateway & Microservices",
+    "description": "Scalable microservices architecture with API gateway",
+    "problem": "Monolithic architecture couldn't scale and was difficult to maintain",
+    "solution": "Designed and implemented microservices with API gateway and service discovery",
+    "techStack": ["Node.js", "Docker", "Kubernetes", "Nginx", "Redis", "Prometheus"],
+    "metrics": {
+      "performance": "99.95% availability",
+      "speed": "Latency reduced by 70%",
+      "scale": "Handles 5M+ requests/day"
+    },
+    "results": [
+      "Improved deployment frequency by 10x",
+      "Reduced incident response time by 80%",
+      "Scaled horizontally to handle 100x traffic"
+    ],
+    "liveUrl": null,
+    "githubUrl": "https://github.com/hassan-dev/api-gateway",
+    "image": "/projects/microservices.jpg",
+    "category": "backend",
+    "client": "Enterprise",
+    "duration": "6 months",
+    "complexity": "High"
+  }
+]

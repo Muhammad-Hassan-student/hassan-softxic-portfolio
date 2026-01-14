@@ -1,0 +1,66 @@
+[
+  {
+    "id": "failure-1",
+    "title": "Over-Engineering Early MVP",
+    "description": "Built a complex microservices architecture for what should have been a simple MVP",
+    "year": 2018,
+    "context": "Early startup project with limited resources and unproven market fit",
+    "mistakes": [
+      "Used Kubernetes for 100 daily users",
+      "Implemented complex CI/CD prematurely",
+      "Spent 3 months on infrastructure instead of product",
+      "Ignored YAGNI (You Ain't Gonna Need It) principle"
+    ],
+    "lesson": "Start simple, scale when needed. MVP should prove concept, not architecture.",
+    "impact": "6 months delay in market validation, wasted $15k in cloud costs",
+    "now": "Now I start with monolith, split when scale demands it"
+  },
+  {
+    "id": "failure-2",
+    "title": "Ignoring Technical Debt",
+    "description": "Pushed for rapid feature development without addressing growing technical debt",
+    "year": 2019,
+    "context": "Fast-growing SaaS with pressure to deliver new features",
+    "mistakes": [
+      "No code reviews process",
+      "Skipped automated testing",
+      "Allowed quick fixes to accumulate",
+      "Ignored refactoring opportunities"
+    ],
+    "lesson": "Technical debt compounds. Small investments in quality save huge costs later.",
+    "impact": "Feature development slowed by 70% after 1 year, required 3-month rewrite",
+    "now": "Now I enforce code reviews, testing, and allocate 20% time for refactoring"
+  },
+  {
+    "id": "failure-3",
+    "title": "Poor Requirements Gathering",
+    "description": "Built the wrong product by not understanding client needs deeply enough",
+    "year": 2020,
+    "context": "Enterprise client with complex business processes",
+    "mistakes": [
+      "Assumed I understood the domain",
+      "Didn't involve end-users early",
+      "Built based on stakeholder guesses",
+      "No prototype validation"
+    ],
+    "lesson": "Spend twice as much time understanding the problem as building the solution.",
+    "impact": "80% of features unused, required complete redesign",
+    "now": "Now I do deep discovery, create prototypes, and validate with real users"
+  },
+  {
+    "id": "failure-4",
+    "title": "Underestimating Maintenance",
+    "description": "Didn't account for ongoing maintenance costs in project pricing",
+    "year": 2021,
+    "context": "Long-term project with evolving requirements",
+    "mistakes": [
+      "Fixed-price contract for evolving scope",
+      "No maintenance budget allocation",
+      "Underestimated support needs",
+      "Didn't plan for updates and security patches"
+    ],
+    "lesson": "Software is a living product, not a one-time deliverable. Price accordingly.",
+    "impact": "Lost money on maintenance, strained client relationship",
+    "now": "Now I offer clear maintenance plans and scope-based pricing"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "nextjs",
+    "name": "Next.js",
+    "level": 9,
+    "experience": 4,
+    "projects": 25,
+    "productionUsage": 15,
+    "category": "frontend",
+    "description": "Full-stack React framework with SSR, SSG, and API routes",
+    "example": "Built a SaaS platform with 50k+ users using Next.js 14 App Router, achieving 95+ Lighthouse scores",
+    "impact": 40
+  },
+  {
+    "id": "react",
+    "name": "React",
+    "level": 10,
+    "experience": 8,
+    "projects": 40,
+    "productionUsage": 30,
+    "category": "frontend",
+    "description": "Modern component-based UI library with hooks",
+    "example": "Developed a real-time dashboard handling 10k+ concurrent users with React + WebSockets",
+    "impact": 35
+  },
+  {
+    "id": "nodejs",
+    "name": "Node.js",
+    "level": 9,
+    "experience": 7,
+    "projects": 35,
+    "productionUsage": 25,
+    "category": "backend",
+    "description": "JavaScript runtime for scalable server-side applications",
+    "example": "Created microservices architecture handling 1M+ daily requests with Node.js & Express",
+    "impact": 50
+  },
+  {
+    "id": "flutter",
+    "name": "Flutter",
+    "level": 8,
+    "experience": 4,
+    "projects": 12,
+    "productionUsage": 8,
+    "category": "mobile",
+    "description": "Cross-platform mobile development framework",
+    "example": "Built a financial app with 100k+ downloads on Play Store using Flutter & Firebase",
+    "impact": 60
+  },
+  {
+    "id": "aws",
+    "name": "AWS",
+    "level": 8,
+    "experience": 5,
+    "projects": 20,
+    "productionUsage": 15,
+    "category": "devops",
+    "description": "Cloud infrastructure and services",
+    "example": "Migrated monolithic app to serverless architecture on AWS, reducing costs by 70%",
+    "impact": 70
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "level": 8,
+    "experience": 4,
+    "projects": 18,
+    "productionUsage": 12,
+    "category": "devops",
+    "description": "Containerization platform for consistent deployments",
+    "example": "Containerized 15+ microservices, improving deployment speed by 90%",
+    "impact": 80
+  }
+]

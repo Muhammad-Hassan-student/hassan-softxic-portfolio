@@ -1,0 +1,68 @@
+[
+  {
+    "id": "testimonial-1",
+    "name": "Sarah Johnson",
+    "role": "CTO",
+    "company": "TechScale Inc.",
+    "content": "Working with Hassan was a game-changer for our company. He not only delivered exceptional code but also helped us think through our architecture in ways we hadn't considered. His ability to balance technical excellence with business needs is rare.",
+    "avatar": "/testimonials/sarah.jpg",
+    "rating": 5,
+    "project": "Enterprise SaaS Platform",
+    "duration": "8 months"
+  },
+  {
+    "id": "testimonial-2",
+    "name": "Michael Chen",
+    "role": "Founder",
+    "company": "StartupXYZ",
+    "content": "As a non-technical founder, I was nervous about building our MVP. Hassan made the process transparent and educational. He delivered ahead of schedule and under budget. Our investors were impressed with the code quality.",
+    "avatar": "/testimonials/michael.jpg",
+    "rating": 5,
+    "project": "FinTech MVP",
+    "duration": "4 months"
+  },
+  {
+    "id": "testimonial-3",
+    "name": "David Rodriguez",
+    "role": "Product Director",
+    "company": "Global Retail Corp",
+    "content": "We've worked with many developers, but Hassan stands out for his strategic thinking. He doesn't just write code; he solves business problems. The mobile app he built for us increased conversions by 35%.",
+    "avatar": "/testimonials/david.jpg",
+    "rating": 5,
+    "project": "E-commerce Mobile App",
+    "duration": "6 months"
+  },
+  {
+    "id": "testimonial-4",
+    "name": "Emma Wilson",
+    "role": "CEO",
+    "company": "HealthTech Solutions",
+    "content": "Hassan handled our HIPAA-compliant healthcare platform with expertise and professionalism. His attention to security and detail gave us complete confidence. The platform has been running flawlessly for 2 years.",
+    "avatar": "/testimonials/emma.jpg",
+    "rating": 5,
+    "project": "Healthcare Management System",
+    "duration": "10 months"
+  },
+  {
+    "id": "testimonial-5",
+    "name": "James Kim",
+    "role": "Engineering Manager",
+    "company": "ScaleFast",
+    "content": "When our monolith couldn't scale, Hassan architected and implemented our microservices migration. The transition was smooth, and we're now handling 10x the traffic with better performance.",
+    "avatar": "/testimonials/james.jpg",
+    "rating": 5,
+    "project": "Microservices Migration",
+    "duration": "7 months"
+  },
+  {
+    "id": "testimonial-6",
+    "name": "Lisa Thompson",
+    "role": "Head of Product",
+    "company": "EdTech Innovations",
+    "content": "Hassan built our learning platform from scratch. His understanding of both frontend and backend allowed him to create a seamless experience. User engagement metrics exceeded our expectations.",
+    "avatar": "/testimonials/lisa.jpg",
+    "rating": 5,
+    "project": "Education Platform",
+    "duration": "5 months"
+  }
+]
