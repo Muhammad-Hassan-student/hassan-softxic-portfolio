@@ -9,7 +9,8 @@ const FloatingWhatsApp = () => {
   const [message, setMessage] = useState("");
   const [isSending, setIsSending] = useState(false);
 
-  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+1234567890";
+  const phoneNumber =
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+923202190049";
   const defaultMessage =
     "Hello! I visited your portfolio and would like to discuss a project.";
 

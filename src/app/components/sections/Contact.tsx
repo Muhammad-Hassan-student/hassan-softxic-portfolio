@@ -26,7 +26,7 @@ const Contact = () => {
       title: "WhatsApp",
       details: "+92 3202190049",
       description: "Quick chat for urgent inquiries",
-      action: "https://wa.me/12345678900",
+      action: "https://wa.me/+92 320219004978900",
     },
     {
       icon: <Calendar className="h-6 w-6" />,

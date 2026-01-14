@@ -215,7 +215,7 @@ const Header = () => {
                             muhammadhassanakram87@gmail.com
                           </a>
                           <a
-                            href="https://wa.me/1234567890"
+                            href="https://wa.me/+923202190043"
                             className="text-sm text-green-600 dark:text-green-400 hover:underline block"
                           >
                             WhatsApp
