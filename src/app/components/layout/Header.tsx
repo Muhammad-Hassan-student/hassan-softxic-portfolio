@@ -15,17 +15,19 @@ import {
   Star,
   Phone,
   Calendar,
+  Lightbulb,
 } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import AnimatedButton from "../ui/AnimatedButton";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
+  const navigate = useRouter();
   // Track scroll position
   useEffect(() => {
     const handleScroll = () => {
@@ -80,6 +82,11 @@ const Header = () => {
       id: "booking",
       label: "Book Call",
       icon: <Calendar className="h-4 w-4" />,
+    },
+    {
+      id: "idea-clarity",
+      label: "Idea Clarity",
+      icon: <Lightbulb className="h-4 w-4" />,
     },
   ];
 
@@ -162,6 +169,14 @@ const Header = () => {
                 <span>{item.label}</span>
               </motion.button>
             ))}
+            <motion.button
+              whileHover={{ y: -1 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => navigate.push("idea-clarity")}
+              className={`flex items-center space-x-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all $`}
+            >
+              <span>Idea Clarity</span>
+            </motion.button>
 
             {/* Contact CTA */}
             <div className="relative">
