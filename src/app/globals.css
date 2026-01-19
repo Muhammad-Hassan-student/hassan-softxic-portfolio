@@ -3,10 +3,10 @@
 @theme {
   /* --- CUSTOM COLORS --- */
   /* Dark Pro Theme */
-  --color-dark-primary: #0a0a0a;
+  /* --color-dark-primary: #0a0a0a;
   --color-dark-secondary: #111111;
   --color-dark-accent: #2563eb;
-  --color-dark-text: #f8fafc;
+  --color-dark-text: #f8fafc; */
 
   /* Light Clean Theme */
   --color-light-primary: #ffffff;
@@ -66,13 +66,13 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 /* --- BASE STYLES --- */
 @layer base {

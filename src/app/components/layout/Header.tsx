@@ -162,7 +162,7 @@ const Header = () => {
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.id)}
                 className={`flex items-center space-x-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${getNavItemStyle(
-                  item.id
+                  item.id,
                 )}`}
               >
                 {item.icon}
@@ -185,7 +185,7 @@ const Header = () => {
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className={`flex items-center space-x-2 px-4 py-2.5 rounded-lg text-sm font-medium ${getNavItemStyle(
-                  "contact"
+                  "contact",
                 )}`}
               >
                 <Phone className="h-4 w-4" />
@@ -246,7 +246,7 @@ const Header = () => {
 
           {/* Right side actions - Clean Layout */}
           <div className="hidden lg:flex items-center space-x-3">
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
             <AnimatedButton
               onClick={() => scrollToSection("contact")}
               variant="primary"
@@ -259,7 +259,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <div className="flex lg:hidden items-center space-x-3">
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -327,7 +327,7 @@ const Header = () => {
                         key={item.id}
                         onClick={() => scrollToSection(item.id)}
                         className={`w-full flex items-center space-x-3 px-4 py-3.5 rounded-lg text-left transition-all ${getNavItemStyle(
-                          item.id
+                          item.id,
                         )}`}
                       >
                         <div
