@@ -41,7 +41,7 @@ export const ideaClaritySchema = z
     scalabilityNeeds: z.enum(["low", "medium", "high", "enterprise"]),
 
     // Step 5: Budget & Timeline
-      performanceExpectations: z.string().optional(), // ✅ यहाँ ADD करें
+    performanceExpectations: z.string().optional(),
 
     budgetRange: z.enum([
       "$1k-$5k",

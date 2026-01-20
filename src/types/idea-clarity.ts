@@ -1,24 +1,24 @@
-export type ProjectType = 
-  | 'web-app' 
-  | 'mobile-app' 
-  | 'saas-platform' 
-  | 'ecommerce' 
-  | 'api-backend' 
-  | 'mvp' 
-  | 'redesign';
+export type ProjectType =
+  | "web-app"
+  | "mobile-app"
+  | "saas-platform"
+  | "ecommerce"
+  | "api-backend"
+  | "mvp"
+  | "redesign";
 
-export type BudgetRange = 
-  | '$1k-$5k' 
-  | '$5k-$10k' 
-  | '$10k-$25k' 
-  | '$25k-$50k' 
-  | '$50k+';
+export type BudgetRange =
+  | "$1k-$5k"
+  | "$5k-$10k"
+  | "$10k-$25k"
+  | "$25k-$50k"
+  | "$50k+";
 
-export type Timeline = 
-  | '1-2 months' 
-  | '3-6 months' 
-  | '6-12 months' 
-  | '12+ months';
+export type Timeline =
+  | "1-2 months"
+  | "3-6 months"
+  | "6-12 months"
+  | "12+ months";
 
 export interface IdeaClarityFormData {
   // Step 1: Project Overview
@@ -26,28 +26,28 @@ export interface IdeaClarityFormData {
   projectType: ProjectType;
   problemStatement: string;
   solutionIdea: string;
-  
+
   // Step 2: Target Audience
   targetAudience: string[];
-  audienceSize: 'small' | 'medium' | 'large' | 'enterprise';
+  audienceSize: "small" | "medium" | "large" | "enterprise";
   userNeeds: string[];
-  
+
   // Step 3: Core Features
   mustHaveFeatures: string[];
-  niceToHaveFeatures: string[];
-  integrations: string[];
-  
+  niceToHaveFeatures?: string[]; // Make optional
+  integrations?: string[]; // Make optional
+
   // Step 4: Technical Requirements
-  technicalRequirements: string[];
-  complianceNeeds: string[];
-  scalabilityNeeds: 'low' | 'medium' | 'high' | 'enterprise';
-  
+  technicalRequirements?: string[]; // Make optional
+  complianceNeeds?: string[]; // Make optional
+  scalabilityNeeds: "low" | "medium" | "high" | "enterprise";
+
   // Step 5: Budget & Timeline
   budgetRange: BudgetRange;
   timeline: Timeline;
   hasTeam: boolean;
   teamSize?: number;
-  additionalNotes: string;
+  additionalNotes?: string; // Make optional
 }
 
 export interface ProjectBlueprint {
@@ -68,7 +68,7 @@ export interface ProjectBlueprint {
     estimatedCost: string;
   }>;
   risks: Array<{
-    type: 'technical' | 'business' | 'timeline' | 'budget';
+    type: "technical" | "business" | "timeline" | "budget";
     description: string;
     mitigation: string;
   }>;
@@ -76,7 +76,7 @@ export interface ProjectBlueprint {
   nextSteps: Array<{
     action: string;
     timeline: string;
-    priority: 'high' | 'medium' | 'low';
+    priority: "high" | "medium" | "low";
   }>;
   readinessScore: number;
   generatedAt: string;

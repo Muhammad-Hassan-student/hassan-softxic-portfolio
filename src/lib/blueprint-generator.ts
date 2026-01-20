@@ -2,7 +2,7 @@ import { IdeaClarityFormData } from "@/lib/validation/idea-clarity";
 import { ProjectBlueprint } from "@/types/idea-clarity";
 
 export async function generateBlueprint(
-  formData: IdeaClarityFormData
+  formData: IdeaClarityFormData,
 ): Promise<ProjectBlueprint> {
   // Calculate readiness score (0-100)
   const readinessScore = calculateReadinessScore(formData);
@@ -174,7 +174,10 @@ function generatePhases(formData: IdeaClarityFormData) {
   return phases;
 }
 
-function calculatePhaseCost(budgetRange: string, percentage: number): string {
+function calculatePhaseCost(
+  budgetRange: "$1k-$5k" | "$5k-$10k" | "$10k-$25k" | "$25k-$50k" | "$50k+",
+  percentage: number,
+): string {
   const ranges = {
     "$1k-$5k": { min: 1000, max: 5000 },
     "$5k-$10k": { min: 5000, max: 10000 },
@@ -189,7 +192,6 @@ function calculatePhaseCost(budgetRange: string, percentage: number): string {
 
   return `$${minCost}-$${maxCost}`;
 }
-
 function identifyRisks(formData: IdeaClarityFormData) {
   const risks = [];
 
@@ -282,7 +284,7 @@ function generateSuccessMetrics(formData: IdeaClarityFormData) {
 
 function generateNextSteps(
   formData: IdeaClarityFormData,
-  readinessScore: number
+  readinessScore: number,
 ) {
   const nextSteps = [];
 
@@ -326,13 +328,13 @@ function generateNextSteps(
 function generateProjectSummary(formData: IdeaClarityFormData): string {
   return `A ${formData.projectType.replace(
     "-",
-    " "
+    " ",
   )} solution that addresses ${formData.problemStatement.substring(
     0,
-    100
+    100,
   )}... by providing ${formData.solutionIdea.substring(
     0,
-    100
+    100,
   )}... Designed for ${formData.audienceSize} audience with ${
     formData.mustHaveFeatures.length
   } core features.`;
