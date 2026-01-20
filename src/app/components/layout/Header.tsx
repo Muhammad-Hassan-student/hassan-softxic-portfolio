@@ -6,33 +6,27 @@ import {
   Menu,
   X,
   Code2,
-  Smartphone,
   ChevronDown,
-  Rocket,
-  User,
-  Briefcase,
-  Target,
-  Star,
-  Phone,
   Calendar,
+  Phone,
+  Home,
+  Briefcase,
+  Award,
+  Crown,
+  Building,
+  Zap,
+  Sparkles,
+  Star,
+  Target,
+  Users,
+  Rocket,
   Lightbulb,
   Mail,
   MessageCircle,
-  Home,
-  Users,
-  Award,
-  Building,
-  Zap,
-  Palette,
-  Globe,
-  Server,
-  Cpu,
-  BarChart,
-  FileText,
-  Shield,
+  User,
   CheckCircle,
-  Sparkles,
-  Crown,
+  Shield,
+  FileText,
 } from "lucide-react";
 import AnimatedButton from "../ui/AnimatedButton";
 import { useRouter } from "next/navigation";
@@ -97,7 +91,7 @@ const Header = () => {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
-  // 4 Main Navigation Tabs
+  // 4 Main Navigation Tabs with Sub-Menu Items
   const mainNavTabs = [
     {
       id: "home",
@@ -110,12 +104,28 @@ const Header = () => {
       label: "Services",
       icon: <Briefcase className="h-4 w-4" />,
       hasDropdown: true,
+      subItems: [
+        { id: "web-development", label: "Web Development", section: "services" },
+        { id: "mobile-apps", label: "Mobile Apps", section: "services" },
+        { id: "ui-ux-design", label: "UI/UX Design", section: "services" },
+        { id: "ecommerce", label: "E-commerce", section: "services" },
+        { id: "saas", label: "SaaS Solutions", section: "services" },
+        { id: "digital-marketing", label: "Digital Marketing", section: "services" },
+      ]
     },
     {
       id: "portfolio",
       label: "Portfolio",
       icon: <Award className="h-4 w-4" />,
       hasDropdown: true,
+      subItems: [
+        { id: "projects", label: "Case Studies", section: "projects" },
+        { id: "client-work", label: "Client Work", section: "projects" },
+        { id: "skills", label: "My Skills", section: "skills" },
+        { id: "testimonials", label: "Testimonials", section: "testimonials" },
+        { id: "process", label: "Work Process", section: "process" },
+        { id: "results", label: "Client Results", section: "client-results" },
+      ]
     },
     {
       id: "contact",
@@ -125,121 +135,18 @@ const Header = () => {
     },
   ];
 
-  // Services Dropdown Content
-  const servicesContent = {
-    title: "Our Services",
-    description: "Complete digital solutions for your business",
-    columns: [
-      {
-        title: "Development",
-        icon: <Code2 className="h-5 w-5" />,
-        color: "blue",
-        items: [
-          { id: "web-development", label: "Web Development", section: "services" },
-          { id: "mobile-apps", label: "Mobile Apps", section: "services" },
-          { id: "ecommerce", label: "E-commerce Solutions", section: "services" },
-          { id: "custom-software", label: "Custom Software", section: "services" },
-        ]
-      },
-      {
-        title: "Design & Branding",
-        icon: <Palette className="h-5 w-5" />,
-        color: "purple",
-        items: [
-          { id: "ui-ux", label: "UI/UX Design", section: "services" },
-          { id: "brand-identity", label: "Brand Identity", section: "services" },
-          { id: "graphic-design", label: "Graphic Design", section: "services" },
-          { id: "product-design", label: "Product Design", section: "services" },
-        ]
-      },
-      {
-        title: "Digital Marketing",
-        icon: <Globe className="h-5 w-5" />,
-        color: "green",
-        items: [
-          { id: "seo", label: "SEO Optimization", section: "services" },
-          { id: "social-media", label: "Social Media Marketing", section: "services" },
-          { id: "content-marketing", label: "Content Marketing", section: "services" },
-          { id: "ppc", label: "PPC Advertising", section: "services" },
-        ]
-      },
-      {
-        title: "Business Solutions",
-        icon: <Building className="h-5 w-5" />,
-        color: "orange",
-        items: [
-          { id: "consulting", label: "IT Consulting", section: "services" },
-          { id: "maintenance", label: "Maintenance & Support", section: "services" },
-          { id: "hosting", label: "Hosting & Deployment", section: "services" },
-          { id: "training", label: "Staff Training", section: "services" },
-        ]
-      }
-    ]
-  };
-
-  // Portfolio Dropdown Content
-  const portfolioContent = {
-    title: "My Portfolio",
-    description: "Projects, Skills & Achievements",
-    columns: [
-      {
-        title: "Projects",
-        icon: <Cpu className="h-5 w-5" />,
-        color: "blue",
-        items: [
-          { id: "projects", label: "Featured Projects", section: "projects" },
-          { id: "live-demo", label: "Live Demos", section: "projects" },
-          { id: "case-studies", label: "Case Studies", section: "projects" },
-          { id: "client-work", label: "Client Work", section: "projects" },
-        ]
-      },
-      {
-        title: "Skills & Expertise",
-        icon: <Target className="h-5 w-5" />,
-        color: "purple",
-        items: [
-          { id: "skills", label: "Technical Skills", section: "skills" },
-          { id: "certifications", label: "Certifications", section: "skills" },
-          { id: "technologies", label: "Technologies", section: "skills" },
-          { id: "expertise", label: "Areas of Expertise", section: "skills" },
-        ]
-      },
-      {
-        title: "Results & Impact",
-        icon: <BarChart className="h-5 w-5" />,
-        color: "green",
-        items: [
-          { id: "client-results", label: "Client Results", section: "client-results" },
-          { id: "testimonials", label: "Testimonials", section: "testimonials" },
-          { id: "success-stories", label: "Success Stories", section: "testimonials" },
-          { id: "metrics", label: "Performance Metrics", section: "client-results" },
-        ]
-      },
-      {
-        title: "About & Process",
-        icon: <User className="h-5 w-5" />,
-        color: "orange",
-        items: [
-          { id: "profile", label: "My Profile", section: "profile" },
-          { id: "process", label: "Work Process", section: "process" },
-          { id: "why-me", label: "Why Choose Me", section: "profile" },
-          { id: "experience", label: "Experience", section: "profile" },
-        ]
-      }
-    ]
-  };
-
   // Tools & Resources
   const toolsItems = [
+    { id: "idea-clarity", label: "Idea Clarity Session", icon: <Lightbulb className="h-4 w-4" />, section: "idea-clarity" },
     { id: "skill-matcher", label: "Skill Matcher", icon: <Target className="h-4 w-4" />, section: "skill-matcher" },
     { id: "project-planner", label: "Project Planner", icon: <FileText className="h-4 w-4" />, section: "project-planner" },
-    { id: "code-scanner", label: "Code Scanner", icon: <Shield className="h-4 w-4" />, section: "code-quality-scanner" },
-    { id: "automated-proposal", label: "Auto Proposal", icon: <CheckCircle className="h-4 w-4" />, section: "automated-proposal" },
+    { id: "code-scanner", label: "Code Scanner", icon: <Shield className="h-4 w-4" />, section: "code-scanner" },
   ];
 
   const scrollToSection = useCallback((sectionId: string) => {
-    if (sectionId === "idea-clarity") {
-      router.push("/idea-clarity");
+    if (sectionId === "idea-clarity" || sectionId === "skill-matcher" || 
+        sectionId === "project-planner" || sectionId === "code-scanner") {
+      router.push(`/${sectionId}`);
       setIsMenuOpen(false);
       setOpenDropdown(null);
       return;
@@ -280,7 +187,7 @@ const Header = () => {
     setOpenDropdown(openDropdown === dropdownId ? null : dropdownId);
   };
 
-  const renderMegaDropdown = (content: any, dropdownId: string) => {
+  const renderDropdown = (items: any[], dropdownId: string) => {
     return (
       <AnimatePresence>
         {openDropdown === dropdownId && (
@@ -293,79 +200,36 @@ const Header = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
-              className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[900px] max-w-[90vw] rounded-xl shadow-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 z-[101] p-6"
+              className="absolute top-full left-0 mt-2 min-w-64 py-2 rounded-xl shadow-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 z-[101]"
             >
-              {/* Header */}
-              <div className="mb-6">
-                <div className="flex items-center space-x-3 mb-2">
-                  <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600">
-                    {dropdownId === "services" ? <Briefcase className="h-6 w-6 text-white" /> : <Award className="h-6 w-6 text-white" />}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200">
-                      {content.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      {content.description}
-                    </p>
-                  </div>
+              <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-800">
+                <div className="flex items-center space-x-2">
+                  <span className="font-semibold text-gray-800 dark:text-gray-200">
+                    {dropdownId === "services" ? "Our Services" : "My Portfolio"}
+                  </span>
+                  {dropdownId === "services" ? (
+                    <Briefcase className="h-4 w-4 text-blue-500" />
+                  ) : (
+                    <Award className="h-4 w-4 text-purple-500" />
+                  )}
                 </div>
               </div>
-
-              {/* Columns */}
-              <div className="grid grid-cols-4 gap-6">
-                {content.columns.map((column: any, index: number) => (
-                  <div key={index} className="space-y-3">
-                    <div className="flex items-center space-x-2 mb-3">
-                      <div className={`p-2 rounded-lg bg-${column.color}-100 dark:bg-${column.color}-900/30 text-${column.color}-600 dark:text-${column.color}-400`}>
-                        {column.icon}
-                      </div>
-                      <h4 className="font-semibold text-gray-800 dark:text-gray-200">
-                        {column.title}
-                      </h4>
-                    </div>
-                    <div className="space-y-2">
-                      {column.items.map((item: any) => (
-                        <button
-                          key={item.id}
-                          onClick={() => {
-                            scrollToSection(item.section || item.id);
-                            setOpenDropdown(null);
-                          }}
-                          className="w-full text-left px-3 py-2 rounded-lg text-sm hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center justify-between group"
-                        >
-                          <span>{item.label}</span>
-                          {activeSection === item.id && (
-                            <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-                          )}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Footer */}
-              <div className="mt-6 pt-4 border-t border-gray-100 dark:border-gray-800">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2">
-                    <Sparkles className="h-5 w-5 text-yellow-500" />
-                    <span className="text-sm text-gray-600 dark:text-gray-400">
-                      Premium quality with competitive pricing
-                    </span>
-                  </div>
-                  <AnimatedButton
+              <div className="py-2">
+                {items.map((item) => (
+                  <button
+                    key={item.id}
                     onClick={() => {
-                      scrollToSection("booking-cta");
+                      scrollToSection(item.section || item.id);
                       setOpenDropdown(null);
                     }}
-                    variant="primary"
-                    size="sm"
-                    icon={<Calendar className="h-4 w-4" />}
+                    className="w-full px-4 py-3 text-left text-sm hover:bg-gray-50 dark:hover:bg-gray-800 flex items-center justify-between text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 group"
                   >
-                    Get Free Consultation
-                  </AnimatedButton>
-                </div>
+                    <span>{item.label}</span>
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity">
+                      →
+                    </span>
+                  </button>
+                ))}
               </div>
             </motion.div>
           </>
@@ -389,7 +253,7 @@ const Header = () => {
       >
         <div className="container mx-auto px-4 sm:px-6 h-full">
           <div className="flex items-center justify-between h-full">
-            {/* Logo with Agency Branding */}
+            {/* Logo with Agency Branding - Enhanced */}
             <motion.div
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -397,47 +261,61 @@ const Header = () => {
               onClick={handleLogoClick}
             >
               <div className="relative">
-                <div className="p-2 bg-gradient-to-br from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 rounded-lg group-hover:shadow-lg transition-shadow">
+                <div className="p-2 bg-gradient-to-br from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 rounded-lg group-hover:shadow-lg transition-shadow relative">
                   <Code2 className="h-6 w-6 text-white" />
-                </div>
-                <div className="absolute -top-1 -right-1 h-3 w-3 bg-green-500 rounded-full border-2 border-white dark:border-gray-900 animate-pulse" />
-              </div>
-              
-              <div className="hidden sm:block">
-                <div className="flex items-center space-x-2">
-                  <h1 className="text-lg font-bold bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-400 dark:to-blue-600 bg-clip-text text-transparent">
-                    Muhammad Hassan
-                  </h1>
-                  <span className="text-xs text-gray-400 dark:text-gray-500">|</span>
-                  <div className="flex items-center space-x-1">
-                    <Crown className="h-3 w-3 text-yellow-500" />
-                    <span className="text-xs font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                      Founder & CEO
-                    </span>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">
-                    Senior Full-Stack Developer
-                  </p>
-                  <span className="text-xs text-gray-400 dark:text-gray-500">•</span>
-                  <div className="flex items-center space-x-1">
-                    <Building className="h-3 w-3 text-blue-500" />
-                    <span className="text-xs font-semibold text-blue-600 dark:text-blue-400">
-                      SOFTXIC Agency
-                    </span>
-                  </div>
+                  <div className="absolute -top-1 -right-1 h-3 w-3 bg-green-500 rounded-full border-2 border-white dark:border-gray-900 animate-pulse" />
                 </div>
               </div>
               
-              <div className="sm:hidden">
+              <div className="hidden lg:flex items-center space-x-4">
                 <div className="flex flex-col">
-                  <h1 className="text-lg font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                    Hassan
-                  </h1>
-                  <div className="flex items-center space-x-1">
+                  <div className="flex items-center space-x-2">
+                    <h1 className="text-lg font-bold bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-400 dark:to-blue-600 bg-clip-text text-transparent">
+                      Muhammad Hassan
+                    </h1>
+                    <div className="px-2 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-xs font-bold text-white flex items-center space-x-1">
+                      <Crown className="h-3 w-3" />
+                      <span>Founder & CEO</span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-3 mt-1">
+                    <div className="flex items-center space-x-1">
+                      <Building className="h-4 w-4 text-blue-500" />
+                      <span className="text-sm font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                        SOFTXIC
+                      </span>
+                    </div>
+                    <span className="text-xs text-gray-400 dark:text-gray-500">•</span>
+                    <span className="text-xs text-gray-600 dark:text-gray-400 font-medium">
+                      Premium Digital Agency
+                    </span>
+                    <span className="text-xs text-gray-400 dark:text-gray-500">•</span>
+                    <div className="flex items-center space-x-1">
+                      <Star className="h-3 w-3 text-yellow-500 fill-yellow-500" />
+                      <span className="text-xs font-semibold text-gray-700 dark:text-gray-300">
+                        Top 1% Developer
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile/Tablet View */}
+              <div className="lg:hidden">
+                <div className="flex flex-col">
+                  <div className="flex items-center space-x-2">
+                    <h1 className="text-lg font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                      Hassan
+                    </h1>
+                    <div className="px-2 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-xs font-bold text-white flex items-center space-x-1">
+                      <Crown className="h-3 w-3" />
+                      <span>Founder</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-2 mt-1">
                     <Building className="h-3 w-3 text-blue-500" />
-                    <span className="text-xs font-semibold text-blue-600">
+                    <span className="text-xs font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                       SOFTXIC
                     </span>
                   </div>
@@ -445,10 +323,10 @@ const Header = () => {
               </div>
             </motion.div>
 
-            {/* Desktop Navigation - 4 Main Tabs */}
-            <nav className="hidden lg:flex items-center space-x-1">
+            {/* Desktop Navigation - 4 Main Tabs with Sub-Menus */}
+            <nav className="hidden xl:flex items-center space-x-1">
               {mainNavTabs.map((item) => {
-                if (item.hasDropdown) {
+                if (item.hasDropdown && item.subItems) {
                   return (
                     <div key={item.id} className="relative">
                       <motion.button
@@ -469,8 +347,7 @@ const Header = () => {
                           }`}
                         />
                       </motion.button>
-                      {item.id === "services" && renderMegaDropdown(servicesContent, "services")}
-                      {item.id === "portfolio" && renderMegaDropdown(portfolioContent, "portfolio")}
+                      {renderDropdown(item.subItems, item.id)}
                     </div>
                   );
                 }
@@ -529,7 +406,7 @@ const Header = () => {
                             </span>
                           </div>
                           <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                            Try our free tools
+                            Free tools for your projects
                           </p>
                         </div>
                         <div className="py-2">
@@ -540,24 +417,15 @@ const Header = () => {
                                 scrollToSection(item.section);
                                 setOpenDropdown(null);
                               }}
-                              className="w-full px-4 py-3 text-left text-sm hover:bg-gray-50 dark:hover:bg-gray-800 flex items-center space-x-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                              className="w-full px-4 py-3 text-left text-sm hover:bg-gray-50 dark:hover:bg-gray-800 flex items-center space-x-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 group"
                             >
                               {item.icon}
                               <span>{item.label}</span>
+                              <span className="opacity-0 group-hover:opacity-100 transition-opacity ml-auto">
+                                →
+                              </span>
                             </button>
                           ))}
-                        </div>
-                        <div className="px-4 py-3 border-t border-gray-100 dark:border-gray-800">
-                          <button
-                            onClick={() => {
-                              router.push("/idea-clarity");
-                              setOpenDropdown(null);
-                            }}
-                            className="w-full flex items-center justify-center space-x-2 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium hover:shadow-lg transition-shadow"
-                          >
-                            <Lightbulb className="h-4 w-4" />
-                            <span>Idea Clarity Session</span>
-                          </button>
                         </div>
                       </motion.div>
                     </>
@@ -571,6 +439,35 @@ const Header = () => {
                 variant="primary"
                 size="md"
                 icon={<Calendar className="h-4 w-4" />}
+                className="ml-4"
+              >
+                Book Strategy Call
+              </AnimatedButton>
+            </nav>
+
+            {/* Tablet Navigation (for medium screens) */}
+            <nav className="hidden lg:flex xl:hidden items-center space-x-1">
+              {mainNavTabs.map((item) => (
+                <motion.button
+                  key={item.id}
+                  whileHover={{ y: -1 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => item.action?.()}
+                  className={`flex items-center space-x-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${getNavItemStyle(
+                    item.id,
+                  )}`}
+                >
+                  {item.icon}
+                  <span>{item.label}</span>
+                </motion.button>
+              ))}
+              
+              <AnimatedButton
+                onClick={() => scrollToSection("booking-cta")}
+                variant="primary"
+                size="sm"
+                icon={<Calendar className="h-4 w-4" />}
+                className="ml-2"
               >
                 Book Call
               </AnimatedButton>
@@ -641,25 +538,36 @@ const Header = () => {
             >
               <div className="p-6 h-full overflow-y-auto">
                 {/* Agency Info */}
-                <div className="mb-6 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
+                <div className="mb-6 p-4 rounded-xl bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
                   <div className="flex items-center space-x-3 mb-3">
-                    <div className="p-2 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg">
+                    <div className="p-3 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl">
                       <Building className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-800 dark:text-gray-200">
-                        SOFTXIC Agency
+                      <h3 className="font-bold text-gray-800 dark:text-gray-200 flex items-center space-x-2">
+                        <span>SOFTXIC Agency</span>
+                        <Sparkles className="h-4 w-4 text-yellow-500" />
                       </h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
                         Premium Digital Solutions
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2 p-3 rounded-lg bg-white/80 dark:bg-gray-900/80">
                     <User className="h-4 w-4 text-blue-500" />
-                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                      Muhammad Hassan - Founder & CEO
-                    </span>
+                    <div>
+                      <span className="text-sm font-bold text-gray-700 dark:text-gray-300">
+                        Muhammad Hassan
+                      </span>
+                      <div className="flex items-center space-x-2 mt-1">
+                        <div className="px-2 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-xs font-bold text-white">
+                          Founder & CEO
+                        </div>
+                        <div className="px-2 py-1 rounded-full bg-gradient-to-r from-green-400 to-emerald-600 text-xs font-bold text-white">
+                          Top 1% Developer
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -685,105 +593,52 @@ const Header = () => {
                     Main Navigation
                   </p>
                   {mainNavTabs.map((item) => (
-                    <button
-                      key={item.id}
-                      onClick={() => {
-                        if (item.action) item.action();
-                        setIsMenuOpen(false);
-                      }}
-                      className={`w-full flex items-center space-x-3 px-4 py-3.5 rounded-lg text-left transition-all ${getNavItemStyle(
-                        item.id,
-                      )}`}
-                    >
-                      <div
-                        className={`p-2 rounded-lg ${
-                          activeSection === item.id
-                            ? "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400"
-                            : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
-                        }`}
+                    <div key={item.id}>
+                      <button
+                        onClick={() => {
+                          if (item.action) item.action();
+                          setIsMenuOpen(false);
+                        }}
+                        className={`w-full flex items-center space-x-3 px-4 py-3.5 rounded-lg text-left transition-all ${getNavItemStyle(
+                          item.id,
+                        )}`}
                       >
-                        {item.icon}
-                      </div>
-                      <div>
-                        <div className="font-medium">{item.label}</div>
-                        {activeSection === item.id && (
-                          <div className="text-xs text-blue-600 dark:text-blue-400">
-                            • Active
-                          </div>
-                        )}
-                      </div>
-                    </button>
-                  ))}
-                </div>
-
-                {/* Services Sections */}
-                <div className="space-y-3 mb-6">
-                  <div className="px-4">
-                    <div className="flex items-center space-x-2">
-                      <Briefcase className="h-4 w-4 text-blue-500" />
-                      <h4 className="font-semibold text-gray-700 dark:text-gray-300">
-                        Services
-                      </h4>
-                    </div>
-                  </div>
-                  {servicesContent.columns.map((column, index) => (
-                    <div key={index} className="space-y-2">
-                      <div className="flex items-center space-x-2 px-4">
-                        <div className={`p-1.5 rounded-lg bg-${column.color}-100 dark:bg-${column.color}-900/30`}>
-                          {column.icon}
-                        </div>
-                        <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
-                          {column.title}
-                        </span>
-                      </div>
-                      {column.items.slice(0, 2).map((item) => (
-                        <button
-                          key={item.id}
-                          onClick={() => {
-                            scrollToSection(item.section);
-                            setIsMenuOpen(false);
-                          }}
-                          className="w-full pl-10 pr-4 py-2.5 text-left text-sm hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+                        <div
+                          className={`p-2 rounded-lg ${
+                            activeSection === item.id
+                              ? "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400"
+                              : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
+                          }`}
                         >
-                          {item.label}
-                        </button>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-
-                {/* Portfolio Sections */}
-                <div className="space-y-3 mb-6">
-                  <div className="px-4">
-                    <div className="flex items-center space-x-2">
-                      <Award className="h-4 w-4 text-purple-500" />
-                      <h4 className="font-semibold text-gray-700 dark:text-gray-300">
-                        Portfolio
-                      </h4>
-                    </div>
-                  </div>
-                  {portfolioContent.columns.map((column, index) => (
-                    <div key={index} className="space-y-2">
-                      <div className="flex items-center space-x-2 px-4">
-                        <div className={`p-1.5 rounded-lg bg-${column.color}-100 dark:bg-${column.color}-900/30`}>
-                          {column.icon}
+                          {item.icon}
                         </div>
-                        <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
-                          {column.title}
-                        </span>
-                      </div>
-                      {column.items.slice(0, 2).map((item) => (
-                        <button
-                          key={item.id}
-                          onClick={() => {
-                            scrollToSection(item.section);
-                            setIsMenuOpen(false);
-                          }}
-                          className="w-full pl-10 pr-4 py-2.5 text-left text-sm hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
-                        >
-                          {item.label}
-                        </button>
-                      ))}
+                        <div>
+                          <div className="font-medium">{item.label}</div>
+                          {activeSection === item.id && (
+                            <div className="text-xs text-blue-600 dark:text-blue-400">
+                              • Active
+                            </div>
+                          )}
+                        </div>
+                      </button>
+                      
+                      {/* Sub-items for mobile */}
+                      {item.hasDropdown && item.subItems && (
+                        <div className="pl-12 pr-4 space-y-1 mt-1">
+                          {item.subItems.slice(0, 3).map((subItem) => (
+                            <button
+                              key={subItem.id}
+                              onClick={() => {
+                                scrollToSection(subItem.section);
+                                setIsMenuOpen(false);
+                              }}
+                              className="w-full text-left py-2 px-3 rounded-lg text-sm hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+                            >
+                              {subItem.label}
+                            </button>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -813,23 +668,9 @@ const Header = () => {
                   ))}
                 </div>
 
-                {/* Idea Clarity */}
-                <div className="mb-6">
-                  <button
-                    onClick={() => {
-                      router.push("/idea-clarity");
-                      setIsMenuOpen(false);
-                    }}
-                    className="w-full flex items-center justify-center space-x-2 px-4 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium hover:shadow-lg transition-shadow"
-                  >
-                    <Lightbulb className="h-4 w-4" />
-                    <span>Idea Clarity Session</span>
-                  </button>
-                </div>
-
                 {/* Contact Info */}
                 <div className="mt-8 p-4 rounded-xl bg-gray-50 dark:bg-gray-800/50">
-                  <h3 className="font-bold mb-3 flex items-center space-x-2">
+                  <h3 className="font-bold mb-3 flex items-center space-x-2 text-gray-800 dark:text-gray-200">
                     <Phone className="h-4 w-4" />
                     <span>Contact SOFTXIC</span>
                   </h3>
@@ -840,10 +681,10 @@ const Header = () => {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">
-                        <Mail className="h-4 w-4" />
+                        <Building className="h-4 w-4" />
                       </div>
                       <div className="flex-1">
-                        <div className="font-medium">Business Email</div>
+                        <div className="font-medium text-gray-700 dark:text-gray-300">Business Email</div>
                         <div className="text-sm text-gray-600 dark:text-gray-400 truncate">
                           info@softxic.com
                         </div>
@@ -859,7 +700,7 @@ const Header = () => {
                         <User className="h-4 w-4" />
                       </div>
                       <div className="flex-1">
-                        <div className="font-medium">Personal Email</div>
+                        <div className="font-medium text-gray-700 dark:text-gray-300">Personal Email</div>
                         <div className="text-sm text-gray-600 dark:text-gray-400 truncate">
                           muhammadhassanakram87@gmail.com
                         </div>
@@ -877,7 +718,7 @@ const Header = () => {
                         <MessageCircle className="h-4 w-4" />
                       </div>
                       <div className="flex-1">
-                        <div className="font-medium">WhatsApp</div>
+                        <div className="font-medium text-gray-700 dark:text-gray-300">WhatsApp</div>
                         <div className="text-sm text-gray-600 dark:text-gray-400">
                           +92 320 2190043
                         </div>
@@ -889,11 +730,17 @@ const Header = () => {
                 {/* Footer */}
                 <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800">
                   <div className="text-center space-y-2">
+                    <div className="flex items-center justify-center space-x-2">
+                      <Rocket className="h-4 w-4 text-blue-500" />
+                      <p className="text-sm font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        SOFTXIC Agency
+                      </p>
+                    </div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      © {new Date().getFullYear()} SOFTXIC Agency
+                      Premium Digital Solutions
                     </p>
                     <p className="text-xs text-gray-400 dark:text-gray-500">
-                      Premium Digital Solutions by Muhammad Hassan
+                      By Muhammad Hassan | Founder & CEO
                     </p>
                   </div>
                 </div>
