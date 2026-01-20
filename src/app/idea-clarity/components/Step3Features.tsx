@@ -120,7 +120,7 @@ const Step3Features: React.FC<Step3Props> = ({ watch, setValue, errors }) => {
     const currentFeatures = watch("mustHaveFeatures") || [];
     setValue(
       "mustHaveFeatures",
-      currentFeatures.filter((_, i) => i !== index)
+      currentFeatures.filter((_, i) => i !== index),
     );
   };
 
@@ -128,7 +128,7 @@ const Step3Features: React.FC<Step3Props> = ({ watch, setValue, errors }) => {
     const currentFeatures = watch("niceToHaveFeatures") || [];
     setValue(
       "niceToHaveFeatures",
-      currentFeatures.filter((_, i) => i !== index)
+      currentFeatures.filter((_, i) => i !== index),
     );
   };
 
@@ -136,7 +136,7 @@ const Step3Features: React.FC<Step3Props> = ({ watch, setValue, errors }) => {
     const currentIntegrations = watch("integrations") || [];
     setValue(
       "integrations",
-      currentIntegrations.filter((_, i) => i !== index)
+      currentIntegrations.filter((_, i) => i !== index),
     );
   };
 
@@ -145,7 +145,7 @@ const Step3Features: React.FC<Step3Props> = ({ watch, setValue, errors }) => {
     if (currentFeatures.includes(feature.label)) {
       setValue(
         "mustHaveFeatures",
-        currentFeatures.filter((f) => f !== feature.label)
+        currentFeatures.filter((f) => f !== feature.label),
       );
     } else {
       setValue("mustHaveFeatures", [...currentFeatures, feature.label]);
@@ -157,7 +157,7 @@ const Step3Features: React.FC<Step3Props> = ({ watch, setValue, errors }) => {
     if (currentIntegrations.includes(integration)) {
       setValue(
         "integrations",
-        currentIntegrations.filter((i) => i !== integration)
+        currentIntegrations.filter((i) => i !== integration),
       );
     } else {
       setValue("integrations", [...currentIntegrations, integration]);
@@ -197,7 +197,7 @@ const Step3Features: React.FC<Step3Props> = ({ watch, setValue, errors }) => {
                 onClick={() => toggleCommonFeature(feature)}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-lg border transition-all ${
                   (watch("mustHaveFeatures") || []).includes(feature.label)
-                    ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400"
+                    ? "border-blue-500 bg-blue-50 -900/20 text-blue-700 dark:text-blue-400"
                     : "border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600"
                 }`}
               >
@@ -236,7 +236,7 @@ const Step3Features: React.FC<Step3Props> = ({ watch, setValue, errors }) => {
               className="flex items-center justify-between p-3 rounded-lg bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700"
             >
               <div className="flex items-center space-x-3">
-                <div className="h-6 w-6 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                <div className="h-6 w-6 rounded-full bg-blue-100 -900/30 flex items-center justify-center">
                   <span className="text-blue-600 dark:text-blue-400 text-xs font-bold">
                     {index + 1}
                   </span>

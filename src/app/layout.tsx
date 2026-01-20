@@ -39,7 +39,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider>
-          <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black">
+          <div className="min-h-screen overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
             <Header />
             <main className="pt-16">{children}</main>
             <Footer />

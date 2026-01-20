@@ -121,7 +121,7 @@ const ProblemSolution = () => {
                 <div
                   className={`p-2 rounded-lg ${
                     selectedProblem === problem.id
-                      ? "bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400"
+                      ? "bg-blue-100 -900/50 text-blue-600 dark:text-blue-400"
                       : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
                   }`}
                 >
@@ -264,7 +264,7 @@ const ProblemSolution = () => {
                               </div>
                               <div className="font-bold text-lg">{value}</div>
                             </div>
-                          )
+                          ),
                         )}
                       </div>
                     </div>

@@ -91,7 +91,7 @@ const Step4Technical: React.FC<Step4Props> = ({ watch, setValue, errors }) => {
         [...currentRequirements, newRequirement.trim()],
         {
           shouldValidate: true,
-        }
+        },
       );
       setNewRequirement("");
     }
@@ -105,7 +105,7 @@ const Step4Technical: React.FC<Step4Props> = ({ watch, setValue, errors }) => {
         [...currentCompliance, newCompliance.trim()],
         {
           shouldValidate: true,
-        }
+        },
       );
       setNewCompliance("");
     }
@@ -118,7 +118,7 @@ const Step4Technical: React.FC<Step4Props> = ({ watch, setValue, errors }) => {
       currentRequirements.filter((_, i) => i !== index),
       {
         shouldValidate: true,
-      }
+      },
     );
   };
 
@@ -129,7 +129,7 @@ const Step4Technical: React.FC<Step4Props> = ({ watch, setValue, errors }) => {
       currentCompliance.filter((_, i) => i !== index),
       {
         shouldValidate: true,
-      }
+      },
     );
   };
 
@@ -141,7 +141,7 @@ const Step4Technical: React.FC<Step4Props> = ({ watch, setValue, errors }) => {
         currentRequirements.filter((r) => r !== requirement),
         {
           shouldValidate: true,
-        }
+        },
       );
     } else {
       setValue("technicalRequirements", [...currentRequirements, requirement], {
@@ -158,7 +158,7 @@ const Step4Technical: React.FC<Step4Props> = ({ watch, setValue, errors }) => {
         currentCompliance.filter((c) => c !== compliance),
         {
           shouldValidate: true,
-        }
+        },
       );
     } else {
       setValue("complianceNeeds", [...currentCompliance, compliance], {
@@ -194,7 +194,7 @@ const Step4Technical: React.FC<Step4Props> = ({ watch, setValue, errors }) => {
               }
               className={`p-6 rounded-xl border-2 text-left transition-all ${
                 watch("scalabilityNeeds") === option.id
-                  ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20"
+                  ? "border-blue-500 bg-blue-50 -900/20"
                   : "border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600"
               }`}
             >
@@ -202,7 +202,7 @@ const Step4Technical: React.FC<Step4Props> = ({ watch, setValue, errors }) => {
                 <div
                   className={`p-3 rounded-lg ${
                     watch("scalabilityNeeds") === option.id
-                      ? "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400"
+                      ? "bg-blue-100 -900/30 text-blue-600 dark:text-blue-400"
                       : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
                   }`}
                 >
@@ -307,12 +307,12 @@ const Step4Technical: React.FC<Step4Props> = ({ watch, setValue, errors }) => {
               </button>
             </div>
           ))}
-          {(!watch("technicalRequirements") ||
-            watch("technicalRequirements").length === 0) && (
+          {watch("technicalRequirements")?.length === 0 ||
+          !watch("technicalRequirements") ? (
             <div className="text-center py-4 text-gray-500 dark:text-gray-400">
               No technical requirements added yet
             </div>
-          )}
+          ) : null}
         </div>
       </div>
 
@@ -397,7 +397,7 @@ const Step4Technical: React.FC<Step4Props> = ({ watch, setValue, errors }) => {
             </div>
           ))}
           {(!watch("complianceNeeds") ||
-            watch("complianceNeeds").length === 0) && (
+            watch("complianceNeeds")?.length === 0) && (
             <div className="text-center py-4 text-gray-500 dark:text-gray-400">
               No compliance needs added yet
             </div>

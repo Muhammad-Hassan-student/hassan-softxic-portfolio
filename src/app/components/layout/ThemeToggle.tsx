@@ -70,7 +70,7 @@ const ThemeToggle = () => {
                 }}
                 className={`flex items-center space-x-3 w-full px-4 py-3 text-left transition-colors ${
                   theme === themeOption.id
-                    ? "bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400"
+                    ? "bg-blue-50 -900/20 text-blue-600 dark:text-blue-400"
                     : "hover:bg-gray-100 dark:hover:bg-gray-800"
                 }`}
               >

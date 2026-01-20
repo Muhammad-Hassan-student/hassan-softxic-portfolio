@@ -335,14 +335,14 @@ export default function ResultsPage() {
                           {technologies.map((tech, index) => (
                             <span
                               key={index}
-                              className="px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-medium"
+                              className="px-4 py-2 rounded-full bg-blue-100 -900/30 text-blue-700 dark:text-blue-400 font-medium"
                             >
                               {tech}
                             </span>
                           ))}
                         </div>
                       </div>
-                    )
+                    ),
                   )}
                 </motion.div>
               )}
@@ -450,10 +450,10 @@ export default function ResultsPage() {
                       key={index}
                       className={`p-6 rounded-xl border ${
                         step.priority === "high"
-                          ? "border-blue-300 dark:border-blue-700 bg-blue-50 dark:bg-blue-900/20"
+                          ? "border-blue-300 dark:border-blue-700 bg-blue-50 -900/20"
                           : step.priority === "medium"
-                          ? "border-yellow-300 dark:border-yellow-700 bg-yellow-50 dark:bg-yellow-900/20"
-                          : "border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50"
+                            ? "border-yellow-300 dark:border-yellow-700 bg-yellow-50 dark:bg-yellow-900/20"
+                            : "border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50"
                       }`}
                     >
                       <div className="flex items-start justify-between mb-3">
@@ -461,10 +461,10 @@ export default function ResultsPage() {
                           <div
                             className={`h-8 w-8 rounded-full flex items-center justify-center ${
                               step.priority === "high"
-                                ? "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400"
+                                ? "bg-blue-100 -900/30 text-blue-600 dark:text-blue-400"
                                 : step.priority === "medium"
-                                ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400"
-                                : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
+                                  ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400"
+                                  : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
                             }`}
                           >
                             {index + 1}
@@ -476,8 +476,8 @@ export default function ResultsPage() {
                             step.priority === "high"
                               ? "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400"
                               : step.priority === "medium"
-                              ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400"
-                              : "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400"
+                                ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400"
+                                : "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400"
                           }`}
                         >
                           {step.priority} priority

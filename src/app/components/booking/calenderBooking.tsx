@@ -164,7 +164,7 @@ const CalendarBooking = () => {
   const handleFormChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    >,
   ) => {
     setFormData({
       ...formData,
@@ -227,12 +227,12 @@ const CalendarBooking = () => {
                     currentStep === step
                       ? "bg-blue-600 border-blue-600 text-white"
                       : ["confirmation", "details"].includes(currentStep) &&
-                        index <
-                          ["date", "time", "details", "confirmation"].indexOf(
-                            currentStep
-                          )
-                      ? "bg-green-500 border-green-500 text-white"
-                      : "border-gray-300 dark:border-gray-700 text-gray-500"
+                          index <
+                            ["date", "time", "details", "confirmation"].indexOf(
+                              currentStep,
+                            )
+                        ? "bg-green-500 border-green-500 text-white"
+                        : "border-gray-300 dark:border-gray-700 text-gray-500"
                   }`}
                 >
                   {currentStep === step ? (
@@ -240,7 +240,7 @@ const CalendarBooking = () => {
                   ) : ["confirmation", "details"].includes(currentStep) &&
                     index <
                       ["date", "time", "details", "confirmation"].indexOf(
-                        currentStep
+                        currentStep,
                       ) ? (
                     <CheckCircle className="h-5 w-5" />
                   ) : (
@@ -254,7 +254,7 @@ const CalendarBooking = () => {
                   className={`h-1 w-16 md:w-24 ${
                     index <
                     ["date", "time", "details", "confirmation"].indexOf(
-                      currentStep
+                      currentStep,
                     )
                       ? "bg-green-500"
                       : "bg-gray-300 dark:bg-gray-700"
@@ -288,8 +288,8 @@ const CalendarBooking = () => {
                           new Date(
                             selectedDate.getFullYear(),
                             selectedDate.getMonth() - 1,
-                            1
-                          )
+                            1,
+                          ),
                         )
                       }
                       className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
@@ -308,8 +308,8 @@ const CalendarBooking = () => {
                           new Date(
                             selectedDate.getFullYear(),
                             selectedDate.getMonth() + 1,
-                            1
-                          )
+                            1,
+                          ),
                         )
                       }
                       className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
@@ -327,7 +327,7 @@ const CalendarBooking = () => {
                         >
                           {day}
                         </div>
-                      )
+                      ),
                     )}
                   </div>
 
@@ -353,10 +353,10 @@ const CalendarBooking = () => {
                               isSelected
                                 ? "bg-blue-600 text-white"
                                 : isToday
-                                ? "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 border-2 border-blue-300 dark:border-blue-700"
-                                : !isCurrentMonth || isPast
-                                ? "text-gray-400 dark:text-gray-600 cursor-not-allowed"
-                                : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                                  ? "bg-blue-100 -900/30 text-blue-600 dark:text-blue-400 border-2 border-blue-300 dark:border-blue-700"
+                                  : !isCurrentMonth || isPast
+                                    ? "text-gray-400 dark:text-gray-600 cursor-not-allowed"
+                                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                             }
                           `}
                         >
@@ -471,10 +471,10 @@ const CalendarBooking = () => {
                           p-3 rounded-lg border text-center transition-all
                           ${
                             selectedSlot?.id === slot.id
-                              ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400"
+                              ? "border-blue-500 bg-blue-50 -900/20 text-blue-600 dark:text-blue-400"
                               : !slot.available
-                              ? "border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 text-gray-400 dark:text-gray-600 cursor-not-allowed"
-                              : "border-gray-300 dark:border-gray-700 hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20"
+                                ? "border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 text-gray-400 dark:text-gray-600 cursor-not-allowed"
+                                : "border-gray-300 dark:border-gray-700 hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20"
                           }
                         `}
                       >
@@ -544,7 +544,7 @@ const CalendarBooking = () => {
                     </h4>
                     <ul className="space-y-3 text-sm">
                       <li className="flex items-start space-x-3">
-                        <div className="h-5 w-5 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
+                        <div className="h-5 w-5 rounded-full bg-blue-100 -900/30 flex items-center justify-center flex-shrink-0">
                           <span className="text-blue-600 dark:text-blue-400 text-xs">
                             ✓
                           </span>
@@ -552,7 +552,7 @@ const CalendarBooking = () => {
                         <span>Google Meet video call</span>
                       </li>
                       <li className="flex items-start space-x-3">
-                        <div className="h-5 w-5 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
+                        <div className="h-5 w-5 rounded-full bg-blue-100 -900/30 flex items-center justify-center flex-shrink-0">
                           <span className="text-blue-600 dark:text-blue-400 text-xs">
                             ✓
                           </span>
@@ -560,7 +560,7 @@ const CalendarBooking = () => {
                         <span>Calendar invite with link</span>
                       </li>
                       <li className="flex items-start space-x-3">
-                        <div className="h-5 w-5 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
+                        <div className="h-5 w-5 rounded-full bg-blue-100 -900/30 flex items-center justify-center flex-shrink-0">
                           <span className="text-blue-600 dark:text-blue-400 text-xs">
                             ✓
                           </span>

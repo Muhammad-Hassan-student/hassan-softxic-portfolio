@@ -12,6 +12,7 @@ import {
   Filter,
 } from "lucide-react";
 import projectsData from "@/data/projects.json";
+import Image from "next/image";
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -90,37 +91,57 @@ const Projects = () => {
               className="group cursor-pointer"
             >
               <div className="relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800/50 hover:shadow-xl transition-all duration-300">
-                {/* Project Image */}
-                <div className="relative h-48 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center">
-                  <div className="text-4xl font-bold text-gray-300 dark:text-gray-700">
-                    {project.title.charAt(0)}
+                {/* Project Image Container */}
+                <div className="relative h-48 bg-gradient-to-br from-blue-500/20 to-cyan-500/20">
+                  {/* Background gradient fallback */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-4xl font-bold text-gray-300 dark:text-gray-700">
+                      {project.title.charAt(0)}
+                    </span>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="absolute top-4 right-4 flex space-x-2">
+
+                  {/* Main Project Image */}
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover transition-opacity duration-300 group-hover:opacity-90"
+                    priority={index < 3}
+                  />
+
+                  {/* Overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                  {/* Badges */}
+                  <div className="absolute top-4 right-4 flex space-x-2 z-10">
                     {project.githubUrl && (
-                      <span className="px-2 py-1 text-xs rounded-full bg-gray-900/80 text-white">
+                      <span className="px-2 py-1 text-xs rounded-full bg-gray-900/80 text-white backdrop-blur-sm">
                         <Github className="h-3 w-3 inline mr-1" />
                         Open Source
                       </span>
                     )}
                     <span
-                      className={`px-2 py-1 text-xs rounded-full ${
+                      className={`px-2 py-1 text-xs rounded-full backdrop-blur-sm ${
                         project.complexity === "High"
                           ? "bg-red-500/80 text-white"
                           : project.complexity === "Medium"
-                          ? "bg-yellow-500/80 text-white"
-                          : "bg-green-500/80 text-white"
+                            ? "bg-yellow-500/80 text-white"
+                            : "bg-green-500/80 text-white"
                       }`}
                     >
                       {project.complexity}
                     </span>
                   </div>
+
+                  {/* Hover indicator */}
+                  <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-500/50 transition-colors duration-300 rounded-2xl pointer-events-none" />
                 </div>
 
                 {/* Project Content */}
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-xl font-bold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-xl font-bold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-1">
                       {project.title}
                     </h3>
                     <div className="flex space-x-2">
@@ -178,7 +199,7 @@ const Projects = () => {
 
                   {/* View Details */}
                   <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-800 text-center">
-                    <button className="text-sm text-blue-600 dark:text-blue-400 font-medium">
+                    <button className="text-sm text-blue-600 dark:text-blue-400 font-medium group-hover:translate-x-1 transition-transform">
                       View Case Study →
                     </button>
                   </div>
@@ -230,6 +251,18 @@ const Projects = () => {
                   <div className="grid lg:grid-cols-3 gap-8">
                     {/* Left Column */}
                     <div className="lg:col-span-2 space-y-6">
+                      {/* Project Image in Modal */}
+                      <div className="relative h-64 rounded-xl overflow-hidden">
+                        <Image
+                          src={selectedProjectData.image}
+                          alt={selectedProjectData.title}
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 66vw"
+                          className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      </div>
+
                       {/* Problem & Solution */}
                       <div className="space-y-4">
                         <div>
@@ -309,7 +342,7 @@ const Projects = () => {
                                 </div>
                                 <div className="font-semibold">{value}</div>
                               </div>
-                            )
+                            ),
                           )}
                         </div>
                       </div>
@@ -354,10 +387,10 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all">
+          <button className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all hover:scale-105">
             <Eye className="h-5 w-5 mr-2" />
             View More Case Studies
-          </div>
+          </button>
         </motion.div>
       </div>
     </section>

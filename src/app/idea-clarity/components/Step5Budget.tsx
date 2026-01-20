@@ -120,7 +120,7 @@ const Step5Budget: React.FC<Step5Props> = ({
     if (customBudget.trim()) {
       // Extract numeric value from custom budget
       const matches = customBudget.match(
-        /\$?(\d+[kKmM]?)\s*-?\s*\$?(\d+[kKmM]?)?/i
+        /\$?(\d+[kKmM]?)\s*-?\s*\$?(\d+[kKmM]?)?/i,
       );
       if (matches) {
         setValue("budgetRange", customBudget.trim() as any, {
@@ -342,7 +342,7 @@ const Step5Budget: React.FC<Step5Props> = ({
               }
               className={`p-6 rounded-xl border-2 text-left transition-all ${
                 watch("timeline") === option.id
-                  ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20"
+                  ? "border-blue-500 bg-blue-50 -900/20"
                   : "border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600"
               }`}
             >
@@ -529,8 +529,8 @@ const Step5Budget: React.FC<Step5Props> = ({
                   {watch("hasTeam") === true
                     ? `Yes, ${watch("teamSize") || 0} team member(s)`
                     : watch("hasTeam") === false
-                    ? "No team needed"
-                    : "Not specified"}
+                      ? "No team needed"
+                      : "Not specified"}
                 </div>
               </div>
             </div>

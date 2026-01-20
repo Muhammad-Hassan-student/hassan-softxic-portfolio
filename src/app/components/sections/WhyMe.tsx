@@ -104,7 +104,7 @@ const WhyMe = () => {
           >
             <div className="p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 border border-blue-200 dark:border-blue-800">
               <div className="flex items-center space-x-3 mb-8">
-                <div className="h-12 w-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                <div className="h-12 w-12 rounded-full bg-blue-100 -900/30 flex items-center justify-center">
                   <Code2 className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                 </div>
                 <div>
@@ -126,7 +126,7 @@ const WhyMe = () => {
                     className="p-4 rounded-xl bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm"
                   >
                     <div className="flex items-start space-x-4">
-                      <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex-shrink-0">
+                      <div className="p-2 rounded-lg bg-blue-100 -900/30 text-blue-600 dark:text-blue-400 flex-shrink-0">
                         {strength.icon}
                       </div>
                       <div className="flex-1">
@@ -307,7 +307,7 @@ const WhyMe = () => {
                   </div>
 
                   <div className="pl-9">
-                    <div className="text-xs px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 inline-block">
+                    <div className="text-xs px-3 py-1 rounded-full bg-blue-100 -900/30 text-blue-800 dark:text-blue-300 inline-block">
                       Result: {item.impact}
                     </div>
                   </div>

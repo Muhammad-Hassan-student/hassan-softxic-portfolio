@@ -22,6 +22,11 @@ import CodeQualityScanner from "./components/sections/CodeQualityScanner";
 import AutomatedProposal from "./components/sections/AutomatedProposal";
 import ClientResults from "./components/sections/ClientResults";
 import LiveProjectTracker from "./components/sections/LiveProjectTracker";
+import InteractiveDemo from "./components/premium/InteractiveDemo";
+import MarketingServices from "./components/services/MarketingServices";
+import DesignServices from "./components/services/DesignServices";
+import ClientPortall from "./components/client/ClientPortal";
+import AgencyDashboard from "./components/admin/Dashboard";
 
 // Component showcase section
 
@@ -35,6 +40,12 @@ export default function Home() {
       <ClientResults /> {/* Powerful social proof */}
       <Services />
       <Skills />
+      <InteractiveDemo />
+      {/* // New Added */}
+      <MarketingServices />
+      <DesignServices />
+      {/* <ClientPortall /> */}
+      {/* <AgencyDashboard /> */}
       <ProblemSolution />
       <Projects />
       <LiveProjectTracker /> {/* Builds trust instantly */}

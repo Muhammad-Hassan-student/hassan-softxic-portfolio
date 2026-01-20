@@ -88,7 +88,7 @@ const Availability = () => {
                   <div
                     className={`h-4 w-4 rounded-full ${avail.color.replace(
                       "text",
-                      "bg"
+                      "bg",
                     )} animate-pulse`}
                   />
                   <h3 className="text-2xl font-bold">Availability Status</h3>
@@ -126,7 +126,7 @@ const Availability = () => {
                 <span>
                   {Math.round(
                     (availability.currentProjects / availability.maxProjects) *
-                      100
+                      100,
                   )}
                   %
                 </span>
@@ -145,8 +145,8 @@ const Availability = () => {
                     avail.status === "available"
                       ? "bg-gradient-to-r from-green-500 to-emerald-500"
                       : avail.status === "limited"
-                      ? "bg-gradient-to-r from-yellow-500 to-orange-500"
-                      : "bg-gradient-to-r from-orange-500 to-red-500"
+                        ? "bg-gradient-to-r from-yellow-500 to-orange-500"
+                        : "bg-gradient-to-r from-orange-500 to-red-500"
                   }`}
                 />
               </div>
@@ -198,7 +198,7 @@ const Availability = () => {
                         key={slot}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="w-full px-3 py-2 text-sm rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
+                        className="w-full px-3 py-2 text-sm rounded-lg bg-blue-50 -900/20 text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
                       >
                         {slot}
                       </motion.button>

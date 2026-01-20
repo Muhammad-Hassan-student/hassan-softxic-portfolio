@@ -246,8 +246,8 @@ const ClientPortal = () => {
                                 project.status === "Completed"
                                   ? "bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300"
                                   : project.status === "In Progress"
-                                  ? "bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300"
-                                  : "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300"
+                                    ? "bg-blue-100 -900/30 text-blue-800 dark:text-blue-300"
+                                    : "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300"
                               }`}
                             >
                               {project.status}
@@ -295,7 +295,7 @@ const ClientPortal = () => {
                       className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
                     >
                       <div className="flex items-center space-x-3">
-                        <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/30">
+                        <div className="p-2 rounded-lg bg-blue-100 -900/30">
                           <FileText className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                         </div>
                         <div>
@@ -337,7 +337,7 @@ const ClientPortal = () => {
                       key={msg.id}
                       className={`p-4 rounded-xl border ${
                         msg.unread
-                          ? "border-blue-300 dark:border-blue-700 bg-blue-50/50 dark:bg-blue-900/10"
+                          ? "border-blue-300 dark:border-blue-700 bg-blue-50/50 -900/10"
                           : "border-gray-200 dark:border-gray-800"
                       }`}
                     >

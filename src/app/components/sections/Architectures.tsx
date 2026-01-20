@@ -181,7 +181,7 @@ const Architecture = () => {
                 <div
                   className={`p-2 rounded-lg ${
                     selectedArchitecture === arch.id
-                      ? "bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400"
+                      ? "bg-blue-100 -900/50 text-blue-600 dark:text-blue-400"
                       : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
                   }`}
                 >
@@ -297,7 +297,7 @@ const Architecture = () => {
                       className="p-4 rounded-xl bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20"
                     >
                       <div className="flex items-center space-x-3">
-                        <div className="h-8 w-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                        <div className="h-8 w-8 rounded-full bg-blue-100 -900/30 flex items-center justify-center">
                           <span className="text-blue-600 dark:text-blue-400 font-bold">
                             {index + 1}
                           </span>

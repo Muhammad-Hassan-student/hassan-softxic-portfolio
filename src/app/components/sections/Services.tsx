@@ -154,7 +154,7 @@ const Services = () => {
               onClick={() => setSelectedService(service.id)}
               className={`p-6 rounded-2xl border-2 transition-all cursor-pointer ${
                 selectedService === service.id
-                  ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20"
+                  ? "border-blue-500 bg-blue-50 -900/20"
                   : "border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-lg"
               }`}
             >
@@ -162,7 +162,7 @@ const Services = () => {
                 <div
                   className={`inline-flex p-3 rounded-xl mb-4 ${
                     selectedService === service.id
-                      ? "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400"
+                      ? "bg-blue-100 -900/30 text-blue-600 dark:text-blue-400"
                       : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
                   }`}
                 >

@@ -97,7 +97,7 @@ const Step1Overview: React.FC<Step1Props> = ({
               onClick={() => setValue("projectType", type.id as any)}
               className={`p-4 rounded-xl border-2 text-left transition-all ${
                 watch("projectType") === type.id
-                  ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20"
+                  ? "border-blue-500 bg-blue-50 -900/20"
                   : "border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600"
               }`}
             >
@@ -105,7 +105,7 @@ const Step1Overview: React.FC<Step1Props> = ({
                 <div
                   className={`p-2 rounded-lg ${
                     watch("projectType") === type.id
-                      ? "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400"
+                      ? "bg-blue-100 -900/30 text-blue-600 dark:text-blue-400"
                       : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
                   }`}
                 >

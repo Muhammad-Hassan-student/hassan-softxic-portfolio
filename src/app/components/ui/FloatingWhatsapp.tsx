@@ -22,7 +22,7 @@ const FloatingWhatsApp = () => {
     const encodedMessage = encodeURIComponent(message || defaultMessage);
     const whatsappUrl = `https://wa.me/${phoneNumber.replace(
       /\D/g,
-      ""
+      "",
     )}?text=${encodedMessage}`;
 
     window.open(whatsappUrl, "_blank");
@@ -124,7 +124,7 @@ const FloatingWhatsApp = () => {
                       <button
                         key={index}
                         onClick={() => setMessage(msg)}
-                        className="px-3 py-2 text-sm bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
+                        className="px-3 py-2 text-sm bg-blue-50 -900/20 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
                       >
                         {msg}
                       </button>

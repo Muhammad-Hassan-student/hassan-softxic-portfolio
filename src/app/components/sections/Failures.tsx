@@ -192,7 +192,7 @@ const Failures = () => {
           className="text-center"
         >
           <div className="p-8 rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20">
-            <div className="inline-flex p-3 rounded-full bg-blue-100 dark:bg-blue-900/30 mb-6">
+            <div className="inline-flex p-3 rounded-full bg-blue-100 -900/30 mb-6">
               <CheckCircle className="h-8 w-8 text-blue-600 dark:text-blue-400" />
             </div>
             <h3 className="text-2xl font-bold mb-4">

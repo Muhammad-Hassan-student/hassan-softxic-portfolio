@@ -76,7 +76,7 @@ const SkillMatcher = () => {
 
     projectTemplates.forEach((template) => {
       const matched = template.requiredSkills.filter((skill) =>
-        selectedSkills.includes(skill)
+        selectedSkills.includes(skill),
       ).length;
 
       const percentage = (matched / template.requiredSkills.length) * 100;
@@ -85,7 +85,7 @@ const SkillMatcher = () => {
         bestMatch = {
           percentage,
           tech: template.requiredSkills.filter(
-            (skill) => !selectedSkills.includes(skill)
+            (skill) => !selectedSkills.includes(skill),
           ),
         };
       }
@@ -158,7 +158,7 @@ const SkillMatcher = () => {
                     onClick={() => toggleSkill(skill.id)}
                     className={`p-4 rounded-xl border-2 transition-all ${
                       selectedSkills.includes(skill.id)
-                        ? "border-blue-500 bg-blue-100 dark:bg-blue-900/20"
+                        ? "border-blue-500 bg-blue-100 -900/20"
                         : "border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700"
                     }`}
                   >
@@ -222,7 +222,7 @@ const SkillMatcher = () => {
                         return skill ? (
                           <span
                             key={skillId}
-                            className="px-2 py-1 text-xs rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300"
+                            className="px-2 py-1 text-xs rounded-full bg-blue-100 -900/30 text-blue-800 dark:text-blue-300"
                           >
                             {skill.name}
                           </span>
@@ -343,8 +343,8 @@ const SkillMatcher = () => {
                 {matchPercentage > 80
                   ? "Perfect match! Let's discuss your project details."
                   : matchPercentage > 60
-                  ? "Good match! I can quickly learn any additional requirements."
-                  : "Let's discuss how I can help with your project requirements."}
+                    ? "Good match! I can quickly learn any additional requirements."
+                    : "Let's discuss how I can help with your project requirements."}
               </p>
               <a
                 href="#contact"

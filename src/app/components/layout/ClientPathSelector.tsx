@@ -131,7 +131,7 @@ const ClientPathSelector = () => {
             onClick={() => setSelectedPath(path.id as ClientType)}
             className={`p-6 rounded-2xl border-2 transition-all ${
               selectedPath === path.id
-                ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20"
+                ? "border-blue-500 bg-blue-50 -900/20"
                 : "border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700"
             }`}
           >
@@ -139,7 +139,7 @@ const ClientPathSelector = () => {
               <div
                 className={`p-3 rounded-full ${
                   selectedPath === path.id
-                    ? "bg-blue-100 dark:bg-blue-900/30"
+                    ? "bg-blue-100 -900/30"
                     : "bg-gray-100 dark:bg-gray-800"
                 }`}
               >
@@ -192,7 +192,7 @@ const ClientPathSelector = () => {
                         <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                         <span>{benefit}</span>
                       </div>
-                    )
+                    ),
                   )}
                 </div>
               </div>
@@ -211,7 +211,7 @@ const ClientPathSelector = () => {
                           {item}
                         </span>
                       </div>
-                    )
+                    ),
                   )}
                 </div>
 

@@ -273,9 +273,9 @@ const IdeaClarityForm = () => {
       </div>
 
       {/* Step Info */}
-      <div className="mt-8 p-4 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800">
+      <div className="mt-8 p-4 rounded-lg bg-blue-50 -900/20 border border-blue-200 dark:border-blue-800">
         <div className="flex items-start space-x-3">
-          <div className="h-5 w-5 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+          <div className="h-5 w-5 rounded-full bg-blue-100 -900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
             <span className="text-blue-600 dark:text-blue-400 text-xs">i</span>
           </div>
           <div className="flex-1">

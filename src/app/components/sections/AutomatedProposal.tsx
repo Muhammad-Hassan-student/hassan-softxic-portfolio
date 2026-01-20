@@ -80,7 +80,7 @@ const AutomatedProposal = () => {
     doc.text(
       `Company: ${clientDetails.companyName || "[Company Name]"}`,
       20,
-      60
+      60,
     );
     doc.text(`Client: ${clientDetails.clientName || "[Client Name]"}`, 20, 67);
     doc.text(`Email: ${clientDetails.email || "[Email]"}`, 20, 74);
@@ -93,13 +93,13 @@ const AutomatedProposal = () => {
     doc.text(
       `Title: ${clientDetails.projectTitle || "[Project Title]"}`,
       20,
-      105
+      105,
     );
 
     const description = doc.splitTextToSize(
       clientDetails.projectDescription ||
         "[Project description will appear here]",
-      170
+      170,
     );
     doc.text(description, 20, 115);
 
@@ -138,7 +138,7 @@ const AutomatedProposal = () => {
 
     // Save PDF
     doc.save(
-      `proposal-${clientDetails.companyName || "client"}-${Date.now()}.pdf`
+      `proposal-${clientDetails.companyName || "client"}-${Date.now()}.pdf`,
     );
   };
 
@@ -332,7 +332,7 @@ Phone: ${clientDetails.phone}
                         setProjectScope({
                           ...projectScope,
                           features: projectScope.features.filter(
-                            (f) => f !== feature
+                            (f) => f !== feature,
                           ),
                         });
                       } else {
@@ -435,7 +435,7 @@ Phone: ${clientDetails.phone}
                         {projectScope.features.slice(0, 3).map((feature) => (
                           <span
                             key={feature}
-                            className="px-2 py-1 text-xs rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300"
+                            className="px-2 py-1 text-xs rounded-full bg-blue-100 -900/30 text-blue-800 dark:text-blue-300"
                           >
                             {feature}
                           </span>

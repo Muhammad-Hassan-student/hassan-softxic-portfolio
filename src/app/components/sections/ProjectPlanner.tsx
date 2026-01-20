@@ -183,7 +183,7 @@ const ProjectPlanner = () => {
                     onClick={() => setProjectType(type.id)}
                     className={`p-4 rounded-xl border-2 text-left transition-all ${
                       projectType === type.id
-                        ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20"
+                        ? "border-blue-500 bg-blue-50 -900/20"
                         : "border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700"
                     }`}
                   >
@@ -191,7 +191,7 @@ const ProjectPlanner = () => {
                       <div
                         className={`p-2 rounded-lg ${
                           projectType === type.id
-                            ? "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400"
+                            ? "bg-blue-100 -900/30 text-blue-600 dark:text-blue-400"
                             : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
                         }`}
                       >
@@ -294,7 +294,7 @@ const ProjectPlanner = () => {
                           {range === "$25k+" && "Enterprise / Complex"}
                         </div>
                       </button>
-                    )
+                    ),
                   )}
                 </div>
               </div>

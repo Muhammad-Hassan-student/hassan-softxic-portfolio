@@ -46,13 +46,13 @@ export async function POST(request: NextRequest) {
     if (error instanceof Error && error.name === "ZodError") {
       return NextResponse.json(
         { error: "Validation failed", details: error.message },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     return NextResponse.json(
       { error: "Failed to generate blueprint" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -66,27 +66,27 @@ async function sendAdminNotification(submission: any) {
     <p><strong>Project:</strong> ${submission.formData.projectName}</p>
     <p><strong>Type:</strong> ${submission.formData.projectType}</p>
     <p><strong>Submitted:</strong> ${new Date(
-      submission.timestamp
+      submission.timestamp,
     ).toLocaleString()}</p>
     <p><strong>Readiness Score:</strong> ${
       submission.blueprint.readinessScore
     }/100</p>
     <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/admin/ideas/${
-    submission.id
-  }">View Submission</a></p>
+      submission.id
+    }">View Submission</a></p>
   `;
 
   await sendEmail(
     adminEmail,
     `New Idea Submission: ${submission.formData.projectName}`,
-    emailContent
+    emailContent,
   );
 }
 
 async function sendUserConfirmation(
   email: string,
   submissionId: string,
-  blueprint: any
+  blueprint: any,
 ) {
   const emailContent = `
     <h2>Your Project Blueprint is Ready! 🎉</h2>

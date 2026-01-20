@@ -93,7 +93,7 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className="flex items-start space-x-4 p-4 rounded-xl bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-800 hover:border-blue-300 dark:hover:border-blue-700 transition-all group"
                   >
-                    <div className="p-3 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
+                    <div className="p-3 rounded-lg bg-blue-100 -900/30 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
                       {method.icon}
                     </div>
                     <div className="flex-1">
