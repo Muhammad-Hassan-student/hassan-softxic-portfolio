@@ -45,7 +45,7 @@ const Profile = () => {
                     <img
                       src="/images/hassan.jpeg"
                       alt="Hassan"
-                      className="absolute inset-0 h-full w-full object-cover"
+                      className="absolute inset-0 h-full w-full object-contain" // object-contain use karein
                     />
 
                     <div className="absolute bottom-4 right-4 h-12 w-12 bg-green-500 rounded-full border-4 border-white dark:border-gray-900 flex items-center justify-center">
