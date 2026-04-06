@@ -40,15 +40,20 @@ const Profile = () => {
               <div className="sticky top-24">
                 {/* Profile Image */}
                 <div className="relative mb-8">
-                  <div className="relative h-64 w-64 mx-auto rounded-2xl overflow-hidden border-4 border-white dark:border-gray-900 shadow-2xl">
-                    {/* Replaced Placeholder with hassan.jpeg */}
+                  {/* Container: Shadow aur Rounded corners ko upgrade kiya hai */}
+                  <div className="relative h-72 w-72 mx-auto rounded-[2rem] overflow-hidden border-[6px] border-white dark:border-gray-800 shadow-[0_20px_50px_rgba(0,0,0,0.2)]">
                     <img
                       src="/images/hassan.jpeg"
                       alt="Hassan"
-                      className="absolute inset-0 h-full w-full object-contain" // object-contain use karein
+                      /* object-cover poore box ko bharega, object-top sar katne se bachayega */
+                      className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 hover:scale-110"
                     />
 
-                    <div className="absolute bottom-4 right-4 h-12 w-12 bg-green-500 rounded-full border-4 border-white dark:border-gray-900 flex items-center justify-center">
+                    {/* Gradient Overlay: Image ke niche thoda dark shade taake depth aaye */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+
+                    {/* Green Verified Badge: Iski position aur look behtar ki hai */}
+                    <div className="absolute bottom-6 right-6 h-12 w-12 bg-emerald-500 rounded-full border-4 border-white dark:border-gray-800 flex items-center justify-center shadow-lg z-10">
                       <CheckCircle className="h-6 w-6 text-white" />
                     </div>
                   </div>
