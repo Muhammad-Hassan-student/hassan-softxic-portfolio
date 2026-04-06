@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     url: "https://hassan.dev",
     title: "Muhammad Hassan | Senior Full-Stack Developer",
     description: "Transform your ideas into scalable digital products",
-    images: ["/og-image.jpg"],
+    images: ["/images/softxic.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Muhammad Hassan | Senior Full-Stack Developer",
     description: "Building the future, one line of code at a time",
-    images: ["/twitter-image.jpg"],
+    images: ["/images/twitter.png"],
   },
 };
 
