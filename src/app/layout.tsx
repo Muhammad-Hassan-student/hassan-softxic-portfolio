@@ -13,19 +13,30 @@ export const metadata: Metadata = {
   description:
     "Building scalable web & mobile products using MERN, Next.js, Flutter & React Native. 8+ years delivering production-ready applications.",
   keywords:
-    "Full-Stack Developer, MERN, Next.js, Flutter, React Native, SaaS Development, MVP Development",
+    "Full-Stack Developer, MERN, Next.js, Flutter, React Native, SaaS Development, MVP Development, SOFTXIC", // 'SOFTXIC' add kar diya
   authors: [{ name: "Muhammad Hassan" }],
   icons: {
-    icon: "/logo.png", // Agar public folder mein logo.png pari hai
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
+  alternates: {
+    canonical: "https://www.softxic.com", // SEO ke liye behtar hai
   },
   openGraph: {
     type: "website",
-    url: "https://hassan.dev",
-    title: "Muhammad Hassan | Senior Full-Stack Developer",
-    description: "Transform your ideas into scalable digital products",
-    images: ["/images/softxic.jpg"],
+    url: "https://www.softxic.com",
+    title: "Muhammad Hassan | Senior Full-Stack Developer & Founder @ SOFTXIC",
+    description:
+      "Transform your ideas into scalable digital products with Muhammad Hassan.",
+    images: [
+      {
+        url: "/images/softxic.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Muhammad Hassan - SOFTXIC",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
