@@ -43,7 +43,7 @@ const Profile = () => {
                   <div className="relative h-64 w-64 mx-auto rounded-2xl overflow-hidden border-4 border-white dark:border-gray-900 shadow-2xl">
                     {/* Replaced Placeholder with hassan.jpeg */}
                     <img
-                      src="/hassan.jpeg"
+                      src="/images/hassan.jpeg"
                       alt="Hassan"
                       className="absolute inset-0 h-full w-full object-cover"
                     />
