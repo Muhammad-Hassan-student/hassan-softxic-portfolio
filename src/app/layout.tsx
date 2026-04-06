@@ -16,25 +16,22 @@ export const metadata: Metadata = {
     "Full-Stack Developer, MERN, Next.js, Flutter, React Native, SaaS Development, MVP Development",
   authors: [{ name: "Muhammad Hassan" }],
   icons: {
-   
-  icon: "/logo.png", // Agar public folder mein logo.png pari hai
-  shortcut: "/logo.png",
-  apple: "/logo.png", 
-},
-
+    icon: "/logo.png", // Agar public folder mein logo.png pari hai
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
   openGraph: {
     type: "website",
     url: "https://hassan.dev",
     title: "Muhammad Hassan | Senior Full-Stack Developer",
     description: "Transform your ideas into scalable digital products",
-    images: ["/softxic.jpg"],
+    images: ["/images/softxic.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Muhammad Hassan | Senior Full-Stack Developer",
     description: "Building the future, one line of code at a time",
-    images: ["/twitter.png"],
+    images: ["/images/twitter.png"],
   },
 };
 
