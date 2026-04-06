@@ -41,15 +41,30 @@ const Profile = () => {
                 {/* Profile Image */}
                 <div className="relative mb-8">
                   <div className="relative h-64 w-64 mx-auto rounded-2xl overflow-hidden border-4 border-white dark:border-gray-900 shadow-2xl">
-                    {/* Placeholder - Replace with actual image */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center">
-                      <span className="text-6xl font-bold text-white">MH</span>
-                    </div>
+                    {/* Replaced Placeholder with hassan.jpeg */}
+                    <img
+                      src="/hassan.jpeg"
+                      alt="Hassan"
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
+
                     <div className="absolute bottom-4 right-4 h-12 w-12 bg-green-500 rounded-full border-4 border-white dark:border-gray-900 flex items-center justify-center">
                       <CheckCircle className="h-6 w-6 text-white" />
                     </div>
                   </div>
                 </div>
+
+                {/* <div className="relative mb-8"> */}
+                {/* <div className="relative h-64 w-64 mx-auto rounded-2xl overflow-hidden border-4 border-white dark:border-gray-900 shadow-2xl"> */}
+                {/* Placeholder - Replace with actual image */}
+                {/* <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center">
+                      <span className="text-6xl font-bold text-white">MH</span>
+                    </div>
+                    <div className="absolute bottom-4 right-4 h-12 w-12 bg-green-500 rounded-full border-4 border-white dark:border-gray-900 flex items-center justify-center">
+                      <CheckCircle className="h-6 w-6 text-white" />
+                    </div>
+                  </div> */}
+                {/* </div> */}
 
                 {/* Quick Info */}
                 <div className="space-y-4">
