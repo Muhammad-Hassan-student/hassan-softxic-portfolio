@@ -14,12 +14,12 @@ const Footer = () => {
     {
       name: "GitHub",
       icon: <Github className="h-5 w-5" />,
-      href: "https://github.com/hassan-dev",
+      href: "https://github.com/Muhammad-Hassan-student/",
     },
     {
       name: "LinkedIn",
       icon: <Linkedin className="h-5 w-5" />,
-      href: "https://linkedin.com/in/hassan-dev",
+      href: "https://www.linkedin.com/in/muhammadhassan63b44628?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
       name: "Twitter",
