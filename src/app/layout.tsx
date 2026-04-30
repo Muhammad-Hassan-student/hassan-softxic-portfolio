@@ -5,6 +5,7 @@ import Header from "@/app/components/layout/Header";
 import Footer from "@/app/components/layout/Footer";
 import { ThemeProvider } from "@/app/components/ui/ThemeProvider";
 import FloatingWhatsApp from "@/app/components/ui/FloatingWhatsapp";
+import ExternalScript from "./components/ExternalScript";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -60,6 +61,7 @@ export default function RootLayout({
             <main className="pt-16">{children}</main>
             <Footer />
             <FloatingWhatsApp />
+            <ExternalScript />
           </div>
         </ThemeProvider>
       </body>
