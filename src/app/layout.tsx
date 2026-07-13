@@ -61,13 +61,14 @@ export default function RootLayout({
             <Header />
             <main className="pt-16">{children}</main>
             <Footer />
-            <FloatingWhatsApp />
-            <ExternalScript />
             <Script
         src="https://nexus-widget.softxic.com/widget.js"
         data-organization-id="org_3CaOEbHunjnaszpUygiJHiO4mf1"
         strategy="afterInteractive"
       />
+            <FloatingWhatsApp />
+            <ExternalScript />
+            
           </div>
         </ThemeProvider>
       </body>
