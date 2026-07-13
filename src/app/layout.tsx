@@ -6,6 +6,7 @@ import Footer from "@/app/components/layout/Footer";
 import { ThemeProvider } from "@/app/components/ui/ThemeProvider";
 import FloatingWhatsApp from "@/app/components/ui/FloatingWhatsapp";
 import ExternalScript from "./components/ExternalScript";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -62,6 +63,11 @@ export default function RootLayout({
             <Footer />
             <FloatingWhatsApp />
             <ExternalScript />
+            <Script
+        src="https://nexus-widget.softxic.com/widget.js"
+        data-organization-id="org_3CaOEbHunjnaszpUygiJHiO4mf1"
+        strategy="afterInteractive"
+      />
           </div>
         </ThemeProvider>
       </body>
